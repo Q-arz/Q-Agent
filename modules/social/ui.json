@@ -1,0 +1,29 @@
+{
+  "title": "Social Tools",
+  "views": [
+    {
+      "type": "text",
+      "title": "About",
+      "content": "Manage social actions: post text and prepare TikTok content."
+    },
+    {
+      "type": "form",
+      "title": "Post to networks",
+      "fields": [
+        { "name": "text", "label": "Text" }
+      ],
+      "submit": { "label": "Post", "command": "post {text}" }
+    },
+    {
+      "type": "form",
+      "title": "Prepare TikTok",
+      "fields": [
+        { "name": "phrase", "label": "Phrase" }
+      ],
+      "submit": { "label": "Prepare", "command": "prepare_tiktok {phrase}" }
+    }
+  ]
+}
+
+
+

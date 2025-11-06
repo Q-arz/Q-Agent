@@ -1,0 +1,15 @@
+# Entornos virtuales
+.venv/
+__pycache__/
+*.pyc
+core/interfaces/voice/
+
+# Configuración local
+.env
+logs/
+ffmpeg/
+
+# Archivos del sistema
+.DS_Store
+qai_core/logs/
+qai_core/core/config/qai_context.md

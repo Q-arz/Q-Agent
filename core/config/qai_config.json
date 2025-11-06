@@ -1,0 +1,104 @@
+{
+    "identity": "Q•Agent",
+    "version": "1.0",
+    "symbolic_role": "System Agent de Qarz",
+    "core_protocol": "MCP",
+    "memory_enabled": true,
+    "modo": "texto",
+    "debug": true,
+    "voz_engine": "vosk",
+    "reflejo_sistemico": true
+  ,
+  "permissions_whitelist": {
+    "qai.modules.system": ["filesystem.read", "filesystem.write", "process.spawn", "ui.automation"],
+    "qai.modules.social": ["network.request"]
+  },
+  "command_timeout_seconds": 12,
+  "command_max_retries": 1,
+  "os_family": "auto",
+  "language": "es",
+  "asr": {
+    "engine": "vosk",
+    "language": "es",
+    "modelDir": null
+  },
+  "tts": {
+    "voice": "auto",
+    "rate": 180
+  },
+  "security": {
+    "allow": {
+      "qai.modules.system": ["open_url ", "list_dir ", "open_app "]
+    },
+    "deny": {
+    },
+    "path_limits": [
+      "C:/Users/PC/Desktop",
+      "C:/Users/PC/Downloads",
+      "C:/Windows/System32",
+      "C:/Program Files",
+      "C:/Program Files (x86)"
+    ]
+  }
+  ,
+  "generators": {
+    "providers": [
+      {
+        "name": "openai-gpt",
+        "type": "openai",
+        "host": "https://api.openai.com/v1",
+        "apiKeyEnv": "OPENAI_API_KEY",
+        "model": "gpt-3.5-turbo",
+        "priority": 1
+      },
+      {
+        "name": "ollama-local",
+        "type": "ollama",
+        "host": "http://localhost:11434",
+        "apiKeyEnv": null,
+        "model": "llama3",
+        "priority": 2
+      },
+      {
+        "name": "lmstudio",
+        "type": "lmstudio",
+        "host": "http://localhost:1234/v1",
+        "apiKeyEnv": "LMSTUDIO_API_KEY",
+        "model": "local-model",
+        "priority": 3
+      }
+    ]
+    ,
+    "cache_ttl_seconds": 120
+  }
+  ,
+  "suggester": {
+    "daily_limit": 5,
+    "rules": {
+      "video": true,
+      "reel": true,
+      "responder": true,
+      "articulo": true
+    }
+  },
+  "executor": {
+    "auto_execute": false,
+    "allow_types": [],
+    "max_retries": 1,
+    "retry_delay_seconds": 5,
+    "cooldown_seconds": {"publicar": 600, "responder": 120}
+  }
+  ,
+  "shortcuts": {
+    "apps": {
+      "notepad": "C:/Windows/System32/notepad.exe",
+      "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+      "calc": "C:/Windows/System32/calc.exe"
+    },
+    "urls": {
+      "docs": "https://example.com",
+      "google": "https://www.google.com"
+    }
+  }
+  }
+  

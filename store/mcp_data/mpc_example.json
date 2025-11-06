@@ -1,0 +1,16 @@
+{
+  "base_url": "https://api.midominio.ai",
+  "name": "mcp_finanzas",
+  "endpoints": [
+    {
+      "path": "usuarios",
+      "method": "get",
+      "command": "obtener usuarios"
+    },
+    {
+      "path": "reportes/mensual",
+      "method": "post",
+      "command": "enviar reporte mensual"
+    }
+  ]
+}
